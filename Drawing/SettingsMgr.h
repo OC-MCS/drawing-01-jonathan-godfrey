@@ -6,26 +6,40 @@ using namespace sf;
 
 enum ShapeEnum { CIRCLE, SQUARE };
 
-// finish this code; add functions, data as needed
-
 class SettingsMgr
 {
 private:
-	
+	Color color;
+	ShapeEnum shape;
+
 public:
 	SettingsMgr(Color startingColor, ShapeEnum startingShape )
 	{
+		color = startingColor;
+		shape = startingShape;
 	}
 
+	// Returns current color
 	Color getCurColor()
 	{
-		return Color::Blue; // just to make it compile 
+		return color;
 	}
 
-
+	// Returns current shape
 	ShapeEnum getCurShape()
 	{
-		return ShapeEnum::CIRCLE; // just to make it compile;
+		return shape;
 	}
 
+	// Sets new color
+	void setCurColor(Color selectedColor)
+	{
+		color = selectedColor;
+	}
+	
+	// Sets new shape
+	void setCurShape(ShapeEnum selectedShape)
+	{
+		shape = selectedShape;
+	}
 };
